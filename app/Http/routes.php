@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'This project P3 using Laravel';
 });
 
 /*

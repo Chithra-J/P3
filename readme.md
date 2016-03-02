@@ -1,27 +1,18 @@
-# Laravel PHP Framework
+# Dynamic Web Applications - Project P3
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Project P3 is to give hands-on practice with working with the essentials of building a Laravel-based site. Building this project will demonstrate an understanding of the following skills: 
+1. Creating a new Laravel application. 
+2. Installing and using Composer packages. 
+3. Routing basics. 
+4. Views. 
+5. Deploying a Laravel app on a live server. 
+ 
+[Spring 2016 Foobooks Planning Doc](https://docs.google.com/document/d/1uARaeHBhrczxQJe5PF2r77NR1_-Jy3jXGKT5uUJSZT0/edit#heading=h.v9bf356ii2yd)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Live URL of the project
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Live URL of the project can be found [here](http://P3.chanchika.me/).
 
-## Official Documentation
+## Demo
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Link to screencast demo can be found [here](TBD).
