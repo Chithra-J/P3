@@ -1,12 +1,18 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "Developer Best Friend",
+    "description": "Generate random users and random text",
+    "keywords": ["framework", "laravel", "users", "text", "generator"],
     "license": "MIT",
+	"authors": [{
+        "name":     "Chithra Jayakumar",
+        "homepage": "http://chanchika.me"
+    }],
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*"
+        "laravel/framework": "5.2.*",
+        "guzzlehttp/guzzle": "^6.1",
+        "joshtronic/php-loremipsum": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -20,7 +26,7 @@
             "database"
         ],
         "psr-4": {
-            "P3\\": "app/"
+            "P3\\": "app"
         }
     },
     "autoload-dev": {

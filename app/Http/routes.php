@@ -1,31 +1,19 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Routes File
-|--------------------------------------------------------------------------
-|
-| Here is where you will register all of the routes in an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
+Route::group(['middleware' => ['web']], function() {
 
-Route::get('/', function () {
-    return 'This project P3 using Laravel';
-});
+	Route::get('/', function() {
+		return view('welcome');
+	});
+	
+	Route::get('/P3', 'P3LoremIpsumController@getIndex');
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
+	Route::get('/P3/lorem-ipsum', 'P3LoremIpsumController@getLoremIpsum');
+	
+	Route::post('/P3/lorem-ipsum', 'P3LoremIpsumController@postLoremIpsum');
 
-Route::group(['middleware' => ['web']], function () {
-    //
+	Route::get('/P3/user-generator', 'P3RandomUserController@getRandomUsers');
+	
+	Route::post('/P3/user-generator', 'P3RandomUserController@postRandomUsers');
+
 });
