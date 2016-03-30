@@ -2,9 +2,11 @@
 
 Route::group(['middleware' => ['web']], function() {
 
+	/*
 	Route::get('/', function() {
-		return view('welcome');
-	});
+			return view('welcome');
+		});*/
+	Route::get('/', 'P3LoremIpsumController@getIndex');
 	
 	Route::get('/P3', 'P3LoremIpsumController@getIndex');
 
