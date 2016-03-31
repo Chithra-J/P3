@@ -11,19 +11,25 @@ such as a page specific stylesheets.
 --}}
 
 @section('content')
-	<div class="panel panel-custom">
-		<div class="panel-heading">
-			<h4 class="panel-title">Lorem Ipsum</h4>
-		</div>
-		<div class="panel-body">
-			@foreach ($random_text as $text)
-			{{$text}}
-			<br>
-			<br>
-			@endforeach
-			
-		</div>
+<label>
+	<input type="checkbox" id="visual" name="visualize" value="checked">
+	Render HTML tags (if any)</label>
+<div class="panel panel-custom">
+	<div class="panel-heading">
+		<h4 class="panel-title">Lorem Ipsum</h4>
 	</div>
+	<div class="panel-body" id="plainText">
+
+		<br>
+		<br>
+		@foreach ($random_text as $text)
+		{{$text}}
+		<br>
+		<br>
+		@endforeach
+
+	</div>
+</div>
 
 @stop
 
@@ -38,7 +44,12 @@ such as a page specific JavaScript files.
 	$(document).ready(function() {
 		$("ul.nav-tabs>li>").find(".active").removeClass("active");
 		$('#RandomText').addClass("active");
-	}); 
+		$("input#visual").click(function() {
+			var text = $('.panel-body').text();
+			$('.panel-body').html(text);
+		});
+	});
+
 </script>
 @stop
 
