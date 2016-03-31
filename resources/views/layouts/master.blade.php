@@ -22,7 +22,7 @@
 						<a id="logo" class="center-block"  href="/P3"><h3 class="title">c Developer's Best Friend d</h3></a>
 						<ul class="nav nav-justified nav-custom" >
 							<li>
-								<a href="/P3">Home</a>
+								<a href="https://github.com/Chithra-J/P3">P3 Git</a>
 							</li>
 							<li>
 								<a href="http://P1.chanchika.me">P1 Home</a>
