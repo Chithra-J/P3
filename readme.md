@@ -42,7 +42,7 @@ Project P3 is to give hands-on practice with working with the essentials of buil
 	
 5. Deploying a Laravel app on a live server. 
 
-# NOTE: I have realized once that the randomuser.me server was not available for a an hour or so.
+### NOTE: I have realized once that the randomuser.me server was not available for a an hour or so.
 
 ## Live URL of the project
 
