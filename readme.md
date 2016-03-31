@@ -42,7 +42,7 @@ Project P3 is to give hands-on practice with working with the essentials of buil
 	
 5. Deploying a Laravel app on a live server. 
 
-### NOTE: I have realized once that the randomuser.me server was not available for a an hour or so.
+#### NOTE: I have realized once during testing that the randomuser.me server was not available for a an hour or so.
 
 ## Live URL of the project
 
@@ -50,4 +50,4 @@ Live URL of the project can be found [here](http://P3.chanchika.me/).
 
 ## Demo
 
-Link to screencast demo can be found [here](TBD).
+Link to screencast demo can be found [here](http://www.screencast.com/users/Chithra_Jayakumar/folders/DWA/media/07a44d4f-3d25-4eae-9425-39126c83d896).
