@@ -11,9 +11,11 @@ such as a page specific stylesheets.
 --}}
 
 @section('content')
-<label>
-	<input type="checkbox" id="visual" name="visualize" value="checked">
-	Render HTML tags (if any)</label>
+<div class="toggle-style">
+	<label>
+		<input type="checkbox" id="visual" name="visualize" value="checked">
+		Render HTML tags (if any)</label>
+</div>
 <div class="panel panel-custom">
 	<div class="panel-heading">
 		<h4 class="panel-title">Lorem Ipsum</h4>
@@ -44,10 +46,13 @@ such as a page specific JavaScript files.
 	$(document).ready(function() {
 		$("ul.nav-tabs>li>").find(".active").removeClass("active");
 		$('#RandomText').addClass("active");
-		$("input#visual").click(function() {
-			var text = $('.panel-body').text();
-			$('.panel-body').html(text);
-		});
+		$(".toggle-style").show();
+
+	});
+	$("input#visual").click(function() {
+		var text = $('.panel-body').text().replace(/\n/g, '<br/>');
+		$('.panel-body').html(text);
+		$(".toggle-style").hide();
 	});
 
 </script>
