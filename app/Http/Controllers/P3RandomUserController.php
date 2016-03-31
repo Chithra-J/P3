@@ -2,7 +2,7 @@
 
 namespace P3\Http\Controllers;
 
-require __DIR__ . '\..\..\..\vendor\autoload.php';
+require __DIR__ . '/../../../vendor/autoload.php';
 
 use P3\Http\Controllers\Controller;
 use P3\Http\Controllers\RandomUserGenerator;
