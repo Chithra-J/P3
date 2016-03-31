@@ -12,18 +12,9 @@ class RandomUserGenerator {
 		$this -> client = new Client(['base_uri' => 'http://api.randomuser.me', 'http_errors' => false]);
 	}
 
-	public function generateRandomUser($type = null) {
-		$params = [];
-
-		if (!is_null($type)) {
-			$params['gender'] = $type;
-		}
-		$response = $this -> client -> get('/', ['query' => $params]);
-		$body = $response -> getBody();
-		$json = json_decode($body, TRUE);
-		return $this -> mapUser($json['results'][0]['user']);
-	}
-
+	/*
+	 * Call to request json object with required parameters
+	 */
 	public function generateRandomUsers($num , $country='USA', $gender=null) {
 		$params = array();
 		
@@ -44,6 +35,9 @@ class RandomUserGenerator {
 		return $data;
 	}
 
+	/*
+	 * Parse json response and save it to user object
+	 */
 	private function loadUserObject($encUser,$country) {
 		$user = new RandomUser();
 		$user -> setEmail($encUser['email']) -> setTitle($encUser['name']['title']) -> setGender($encUser['gender']) -> setFirstName($encUser['name']['first']) -> setLastName($encUser['name']['last']) -> setStreetAddress($encUser['location']['street']) -> setUsername($encUser['username']) -> setPassword($encUser['password']) -> setDateOfBirth($encUser['dob']) -> setPhone($encUser['phone']) -> setCell($encUser['cell']) -> setPicture($encUser['picture']['large']) -> setThumPicture($encUser['picture']['thumbnail']);

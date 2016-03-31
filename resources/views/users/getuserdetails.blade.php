@@ -4,10 +4,6 @@
 Developer's Best Friend
 @stop
 
-@section('head')
-
-@stop
-
 @section('content')
 <div class="panel panel-custom">
 	<div class="panel-heading">

@@ -45,8 +45,7 @@ class P3LoremIpsumController extends Controller {
 		});
 		$random_text = $this -> callLoremIpsumWithTags($data['lorem_ipsum_option'], $number_of_text, $html_tags);
 
-		return view('loremipsum.show') -> with('random_text', $random_text);
-		;
+		return view('loremipsum.show') -> with('random_text', $random_text); ;
 
 	}
 
@@ -59,6 +58,9 @@ class P3LoremIpsumController extends Controller {
 		$num_of_tags = count($html_tags);
 		$html_tag_quo = 0;
 		$html_tag_mod = 0;
+		/*
+		 Logic to separate out the list of text that need html tags equally divide and the remainder gets regular text
+		 */
 		if ($num_of_tags > 0 && $num_of_tags >= $number_of_text) {
 			$html_tag_quo = floor($number_of_text / $num_of_tags);
 			$html_tag_mod = $number_of_text % $num_of_tags;
@@ -85,11 +87,9 @@ class P3LoremIpsumController extends Controller {
 		switch ($lorem_ipsum_option) {
 			case "Paragraphs" :
 				if ($remaining_text > 0) {
-					// remainder times
 					$temp_random_text = $lorem_ipsum -> getParagraphs($remaining_text);
 				}
 				if ($batch_text > 0) {
-					// quotient times
 					for ($i = 0; $i < $num_of_tags; $i++) {
 						$temp_random_text = array_merge($lorem_ipsum -> getParagraphs($batch_text, $html_tags[$keys[$i]]), $temp_random_text);
 					}
@@ -98,11 +98,9 @@ class P3LoremIpsumController extends Controller {
 				break;
 			case "Words" :
 				if ($remaining_text > 0) {
-					// remainder times
 					$temp_random_text = $lorem_ipsum -> getWords($remaining_text);
 				}
 				if ($batch_text > 0) {
-					// quotient times
 					for ($i = 0; $i < $num_of_tags; $i++) {
 						$temp_random_text = array_merge($lorem_ipsum -> getWords($batch_text, $html_tags[$keys[$i]]), $temp_random_text);
 					}
@@ -111,11 +109,9 @@ class P3LoremIpsumController extends Controller {
 				break;
 			case "Sentences" :
 				if ($remaining_text > 0) {
-					// remainder times
 					$temp_random_text = $lorem_ipsum -> getSentence($remaining_text);
 				}
 				if ($batch_text > 0) {
-					// quotient times
 					for ($i = 0; $i < $num_of_tags; $i++) {
 						$temp_random_text = array_merge($lorem_ipsum -> getSentence($batch_text, $html_tags[$keys[$i]]), $temp_random_text);
 					}
@@ -126,11 +122,9 @@ class P3LoremIpsumController extends Controller {
 			default :
 				$random_text = $lorem_ipsum -> getParagraphs($batch_text);
 				if ($remaining_text > 0) {
-					// remainder times
 					$temp_random_text = $lorem_ipsum -> getParagraphs($remaining_text);
 				}
 				if ($batch_text > 0) {
-					// quotient times
 					for ($i = 0; $i < $num_of_tags; $i++) {
 						$temp_random_text = array_merge($lorem_ipsum -> getParagraphs($batch_text, $html_tags[$keys[$i]]), $temp_random_text);
 					}

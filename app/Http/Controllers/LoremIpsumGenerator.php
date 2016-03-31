@@ -10,15 +10,22 @@ class LoremIpsumGenerator {
 	public function __construct() {
 		$this -> lipsum = new LoremIpsum();
 	}
-
+	
+	/*
+	 * Get paragraph as array 
+	*/
 	public function getParagraphs($num, $tags = false) {
 		return $this -> lipsum -> paragraphs($num, $tags, true);
 	}
-
+	/*
+	 * Get sentences as array 
+	*/
 	public function getSentence($num, $tags = false) {
 		return $this -> lipsum -> sentences($num, $tags, true);
 	}
-
+	/*
+	 * Get words as array 
+	*/
 	public function getWords($num, $tags = false) {
 		$random_words = $this -> lipsum -> words($num + 200, $tags, true);
 		shuffle($random_words);
