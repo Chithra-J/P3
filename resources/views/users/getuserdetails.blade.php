@@ -14,12 +14,13 @@ Developer's Best Friend
 		<h4 class="panel-title lorem-panel">Random User Input Selection</h4>
 	</div>
 	<div class="panel-body">
-		<form method='POST' action='/P3/user-generator' id="random_user_option" class="form-horizontal" role="form">
+		<form method='POST' action='/P3/user-generator' id="random_user_option" class="form-horizontal">
 			<div class="row">
-				<div class="col-md-6">
-					<input type='hidden' name='_token' value='{{ csrf_token() }}'>
-					<br>
-					<fieldset>
+				<fieldset>
+					<div class="col-md-6">
+						<input type='hidden' name='_token' value='{{ csrf_token() }}'>
+						<br>
+
 						<input type='text' class="text-center" name='number_of_users' value='2' size="10" maxlength="3">
 						<br>
 						<h5 class="help-block"> Enter number (2-50) </h5>
@@ -34,55 +35,61 @@ Developer's Best Friend
 						@endif
 						<br>
 						<br>
-						<br<br><br><br<br><br><br<br>
-						</div>
-						<div class="col-md-6">
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+					</div>
+					<div class="col-md-6">
 						<div id='user_tags'>
-						<h5 class="option-text">More Options</h5> 
-						<h5 class="option-text-sm">Choose Nationality</h5> 
-						<div class="radio">
-						<label>
-						<input type="radio" name="optionsCountry" id="optionsRadios1" value="US" checked>
-						United States of America (US)</label>
-						</div>
-						<div class="radio">
-						<label>
-						<input type="radio" name="optionsCountry" id="optionsRadios2" value="GB">
-						Great Britain (GB)</label>
-						</div>
-						<div class="radio">
-						<label>
-						<input type="radio" name="optionsCountry" id="optionsRadios1" value="CA">
-						Canada (CA)</label>
-						</div>
-						<div class="radio">
-						<label>
-						<input type="radio" name="optionsCountry" id="optionsRadios2" value="FR">
-						France (FR)</label>
-						</div>
-						<br>
+							<h5 class="option-text">More Options</h5>
+							<h5 class="option-text-sm">Choose Nationality</h5>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsCountry" value="US" checked>
+									United States of America (US)</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsCountry" value="GB">
+									Great Britain (GB)</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsCountry" value="CA">
+									Canada (CA)</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsCountry" value="FR">
+									France (FR)</label>
+							</div>
+							<br>
 						</div>
 						<div>
-						<h5 class="option-text-sm">Choose Gender</h5>
-						<div>
-						<div class="radio">
-						<label>
-						<input type="radio" name="optionsGender" value="female">
-						Female</label>
+							<h5 class="option-text-sm">Choose Gender</h5>
+							<div>
+								<div class="radio">
+									<label>
+										<input type="radio" name="optionsGender" value="female">
+										Female</label>
+								</div>
+								<div class="radio">
+									<label>
+										<input type="radio" name="optionsGender" value="male">
+										Male</label>
+								</div>
+							</div>
 						</div>
-						<div class="radio">
-						<label>
-						<input type="radio" name="optionsGender" value="male">
-						Male</label>
-						</div>
-						</div>
-						</div>
-						</div>
-						</div>
+					</div>
 
-						</fieldset>
-						<br>
-						<input class='btn btn-default btn-sm' type='submit' value='Get some random users'>
+				</fieldset>
+			</div>
+			<br>
+			<input class='btn btn-default btn-sm' type='submit' value='Get some random users'>
 		</form>
 	</div>
 </div>

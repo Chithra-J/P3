@@ -18,7 +18,7 @@ such as a page specific stylesheets.
 	<div class="col-md-12">
 		<div class="wrapper">
 			<?php $id_count = 1; ?>
-			<h4 id="user_gen"> User Details &nbsp; &nbsp; &nbsp; <a href="#" class="btn btn-info max">Maximum</a>&nbsp; &nbsp; &nbsp;<a href="#" class="btn btn-info mid">Medium</a>&nbsp; &nbsp; &nbsp;<a href="#" class="btn btn-info min">Minimum</a></h4>
+			<h4 id="user_gen"> User Details &nbsp; &nbsp; &nbsp; <a href="#" class="btn btn-default btn-sm max">Maximum</a>&nbsp; &nbsp; &nbsp;<a href="#" class="btn btn-default btn-sm mid">Medium</a>&nbsp; &nbsp; &nbsp;<a href="#" class="btn btn-default btn-sm min">Minimum</a></h4>
 			<br>
 			<br>
 			<div class="accordion" id="accordionid">

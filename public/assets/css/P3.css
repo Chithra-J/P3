@@ -43,12 +43,12 @@ ul.nav-tabs > li > a {
 	font-weight: bolder;
 }
 
-input.btn-default {
+input.btn-default, a.btn-default {
 	background-color: #76CEE4;
 	color: #fff;
 }
 
-input.btn-default:hover, ul.nav-tabs > li > a:hover, ul.nav-tabs > li > a.active, ul.nav-custom-footer > li > a:hover, ul.nav-custom-footer > li > a.active {
+input.btn-default:hover, a.btn-default:hover,ul.nav-tabs > li > a:hover, ul.nav-tabs > li > a.active, ul.nav-custom-footer > li > a:hover, ul.nav-custom-footer > li > a.active {
 	color: #0E947A;
 	background-color: #E7EC6E;
 	border: 1px solid #0088cc;
